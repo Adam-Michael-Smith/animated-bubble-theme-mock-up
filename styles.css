@@ -9,7 +9,7 @@
 :root{
     --font-main: Arial, Helvetica, sans-serif;
     --font-accent: 'Times New Roman', Times, serif;
-    --color-orange-main: rgb(255, 184, 31);
+    --color-orange-main: rgb(255, 179, 15);
     --color-yellow-main: rgb(255, 251, 42);
     --font-color-main: #fff;
     --font-hover-color: #000;
@@ -120,6 +120,7 @@ li{
     height: auto;
     text-align: center;
     position: relative;
+    margin: auto;
 }
 
 .hero h1{
@@ -127,9 +128,8 @@ li{
     text-transform: uppercase;
     color: var(--color-yellow-main);
     letter-spacing: 2px;
-    max-width: 100%;
-    margin: 40px;
     padding-top: 19vh;
+    overflow: hidden;
 }
 
 .hero p{
@@ -137,7 +137,7 @@ li{
     color: var(--font-color-main);
     text-align: center;
     margin: 20px auto auto auto;
-    width: 60%;
+    width: 80%;
 }
 
 /* ------ JAVASCRIPT ------ */
@@ -160,15 +160,16 @@ span{
     height: auto;
     text-align: center;
     margin-top: 300px;
-    margin-bottom: 300px;;
+    margin-bottom: 300px;
+    width: 100%;
 }
 
 h2{
     font-size: 6rem;
-    max-width: 100%;
     margin: 40px;
     color: var(--font-color-main);
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 .section-two p{
@@ -213,17 +214,25 @@ h2{
 footer{
     position: relative;
     text-align: center;
-    z-index: -1;
+    z-index: 1;
     line-height: 10vh;
     height: 100px;
     color: var(--font-color-main);
-    background-color: var(--color-orange-main);
-
 }
 
 /* ------ MEDIA QUERIES ------ */
 
 @media screen and (max-width: 650px) {
+
+    .hero h1{
+        width: 100%;
+        padding-top: 8vh;
+        font-size: 2rem;
+    }
+
+    .section-two h2{
+        font-size: 2rem;
+    }
 
     .blob-four, .blob-five{
         display: block;
@@ -264,6 +273,15 @@ footer{
         top: 300px;
         left: -1300px;
         height: 2000px;
+    }
+
+    .section-two p, .nav ul li a {
+        width: 100%;
+        display: block;
+    }
+
+    .nav ul li a:hover{
+        border: none;
     }
 }
 

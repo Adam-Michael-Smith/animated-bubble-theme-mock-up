@@ -10,7 +10,6 @@
     --font-main: Arial, Helvetica, sans-serif;
     --font-accent: 'Times New Roman', Times, serif;
     --color-orange-main: rgb(255, 181, 22);
-    --color-yellow-main: rgb(187, 0, 69);
     --font-color-main: #fff;
     --font-hover-color: #000;
 }
@@ -18,6 +17,11 @@
 html{
     scroll-behavior: smooth;
     height: 100%;
+}
+
+p{
+    font-size: 1.2rem;
+    color: var(--font-color-main);
 }
 
 /* -------------------------------- */
@@ -29,11 +33,20 @@ body{
 }
 
 .clip-all{
-    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow: hidden;
-    position: absolute;
+    position: relative;
+}
+
+h1, h2{
+    font-size: 4rem;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    color: var(--font-color-main);
+    text-transform: uppercase;
 }
 
 /* ------ NAV ------ */
@@ -42,15 +55,15 @@ body{
     width: 100%;
     padding: 40px;
     text-align: center;
-    cursor: pointer;
     display: inline-block;
     z-index: 1;
     position: relative;
 }
 
 li{
-    padding: 20px;
+    padding: 14px 30px;
     display: inline;
+    cursor: pointer;
 }
 
 .nav a{
@@ -60,7 +73,6 @@ li{
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    padding: 10px;
 }
 
 .nav li:nth-child(1){
@@ -74,33 +86,32 @@ li{
 .nav a:hover{
     color: var(--font-hover-color);
     border-bottom: 6px solid var(--font-hover-color);
-    cursor: pointer;
 }
 
 /* ------ CSS LOGO ------ */
 
 .logo-container{
-    position: relative;
-    margin-top: 50px;
     height: 70px;
-    width: 100%;
-}
-.logo-letter{
-    position: relative;
-    left: 14px;
-    font-size: 3rem;
-    text-decoration: underline;
-    font-family:'Times New Roman', Times, serif;
-    color: var(--color-orange-main);
+    width: 70px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
 }
 
 .logo{
-    position: absolute;
-    top: -122px;
     background: var(--font-color-main);
-    left: 30px;
-    border-radius: 0 50% 50% 50%;
     border: 4px solid var(--font-color-main);
+    border-radius: 0 50% 50% 50%;
+    position: inherit;
+}
+
+.logo-letter{
+    font-size: 3rem;
+    font-family:'Times New Roman', Times, serif;
+    color: var(--color-orange-main);
+    text-decoration: underline;
+    left: 14px;
+    position: inherit;
 }
 
 /* ------ FLOATING ICONS: RIGHT ------ */
@@ -113,10 +124,8 @@ li{
   }
   
   .iconsRight .box {
-    font-size: 3rem;
     border: 2px solid white;
-    width: 175px;
-    height: 50px;
+    width: 175px; height: 50px;
     right: -125px;
     margin-bottom: 6px;
     position: relative;
@@ -134,14 +143,16 @@ li{
   
   .iconsRight .box a {
     text-decoration: none;
-  }
-  
-  .iconsRight .box p {
     font-size: 1rem;
+    display: block;
     font-weight: bold;
     color: var(--font-color-main);
     margin-left: 60px;
-    padding: 16px 0px;
+    margin-top: 14px;
+  }
+
+  .iconsRight .box:hover{
+    background: rgb(255, 181, 22, 0.5);
   }
 
 /* ------ HERO ------ */
@@ -151,78 +162,59 @@ li{
     height: auto;
     text-align: center;
     position: relative;
-    margin: auto;
 }
 
 .hero h1{
-    font-size: 6rem;
     text-transform: uppercase;
-    color: var(--color-yellow-main);
-    letter-spacing: 2px;
-    margin-top: 50px;
+    margin: 150px auto auto auto;
     overflow: hidden;
 }
 
 .hero p{
-    font-size: 100%;
-    color: var(--font-color-main);
-    text-align: center;
     margin: 20px auto auto auto;
-    width: 80%;
+    width: 70%;
 }
 
 .hero button{
     font-size: 1.2rem;
-    font-weight: 700;
-    padding: 20px 40px;
-    margin-top: 2rem;
-    width: auto;
-    margin-left:20%;
-    margin-right: 20%;
-    height: auto;
-    text-transform: uppercase;
-    background: none;
     color: var(--font-color-main);
+    font-weight: 700;
+    margin-top: 50px;
+    width: 150px; height: 150px;
     border: 4px solid var(--font-color-main);
     cursor: pointer;
+    text-align: center;
     background: rgba(201, 201, 201, 0.5);
-    border-radius: 0px 0px 50px 50px;
+    border-radius: 100%;
 }
 
 .hero button:hover{
-    background: rgba(90, 0, 33, 1);
+    background: rgb(255, 181, 22, 0.5);
 }
 
 /* ------ SCROLL BUTTON ------ */
 .scroll-button{
     width: 70px;
     height: 150px;
-    margin: 120px auto;
+    margin: 20px auto;
     position: relative;
 }
 
 .squares{
-    position: relative;
-    border-left: 4px solid white;
-    border-bottom: 4px solid white;
-    width: 100%;
+    position: inherit;
+    border-left: 4px solid var(--font-color-main);
+    border-bottom: 4px solid var(--font-color-main);
     margin: auto auto -2px auto;
     height: 25px;
     transform: rotate(-45deg);
-    z-index: 2;
+    z-index: 1;
     cursor: pointer;
 }
-
-.squares:nth-child(1), .squares:nth-child(2), .squares:nth-child(4){
-    border-left: 4px solid rgb(255, 255, 255);
-    border-bottom: 4px solid rgb(255, 255, 255);
-}
-
 
 /* ------ JAVASCRIPT ------ */
 
 span{
-    color: var(--color-yellow-main);
+    color: var(--color-orange-main);
     opacity: 0;
     transition: all 0.5s ease;
 }
@@ -234,36 +226,38 @@ span{
 
 /* ------ MAIN SECTION ------ */
 
-.section-two{
+.section-two, .section-three{
     position: relative;
-    text-align: center;
-    margin-top: 300px;
-    margin-bottom: 300px;
+    margin-top: 150px;
+    margin-bottom: 250px;
+    width: 100%;
+}
+
+.section-paragraphs-container{
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
 }
 
-h2{
-    font-size: 6rem;
-    margin: 40px;
-    color: var(--font-color-main);
-    text-transform: uppercase;
-    overflow: hidden;
-}
-
-.section-two p{
-    font-size: 100%;
-    color: var(--font-color-main);
+.section-two p, .section-three p{
     padding: 40px;
     width: 33%;
     display: inline-block;
+}
+
+/* ------ CLIENTS ROTATING BANNER ------ */
+
+.clients{
+    width: 100%; height: 100px;
+    background: white;
+    opacity: 0.5;
+    margin: auto auto 50px auto;
 }
 
 /* ------ YELLOW BLOBS SVG ------ */
 
 .blobs{
     position: relative;
+    z-index: -2;
 }
 
 .blob-one{
@@ -292,12 +286,12 @@ h2{
 }
 
 footer{
-    position: relative;
-    text-align: center;
-    z-index: 1;
-    line-height: 10vh;
     height: 100px;
     color: var(--font-color-main);
+    text-align: center;
+    line-height: 10vh;
+    z-index: -1;
+    position: relative;
 }
 /* ------ MEDIA QUERIES FOR BLOBS ------ */
 @media screen and (max-width: 650px){
@@ -415,74 +409,74 @@ footer{
 }
 
 /* ------ MEDIA QUERIES ------ */
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 890px) {
 
     .logo-container{
-        position: absolute;
-        margin-top: 75px;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: auto;
+        display: block;
+        align-items: center;
+        position: relative;
     }
 
     .logo{
-        position: relative;
+        position: inherit;
         margin: auto;
-        top: -100px;
-        left: 0;
-        background: var(--font-color-main);
-        border-radius: 0 50% 50% 50%;
-        border: 4px solid var(--font-color-main);
     }
 
     .hero button{
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 1.0rem;
         letter-spacing: 0.1rem;
         padding: 20px 20px;
-        margin-top: 2rem;
-        width: 125px;
-        margin-left:20%;
-        margin-right: 20%;
-        height: 125px;
-        text-transform: uppercase;
-        background: none;
-        color: var(--font-color-main);
-        border: 4px solid var(--font-color-main);
-        cursor: pointer;
-        background: rgba(201, 201, 201, 0.5);
-        border-radius: 100%;
+        width: 125px; height: 125px;
+    }
+
+    h1, h2{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1rem;
     }
 
     .hero h1{
-        width: 100%;
-        padding-top: 8vh;
-        font-size: 2rem;
-    }
-
-    .section-two h2{
-        font-size: 2rem;
+        margin-top: 50px;
     }
 
     .nav li:nth-child(1), .nav li:nth-child(2){
         border-right: none;
     }
 
+    .nav ul li a:hover{
+        border: none;
+    }
+
     .iconsRight{
         display: none;
     }
 
-    .section-two p, .nav ul li a {
+    .nav ul li a {
         width: 100%;
         display: block;
     }
 
-    .nav ul li a:hover{
-        border: none;
+    .section-two p, .section-three p{
+        width: 100%;
+        padding: 20px;
     }
-}
 
-@media screen and (min-width: 650px) {
-    
-    .hero h1, .section-two h2{
-        font-size: 4rem;
+    .section-two, .section-three{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .clients{
+        height: 65px;
+    }
+
+    footer{
+        height: 50px;
     }
 }

@@ -66,10 +66,9 @@ for (let i = 0; i < iconsRight.length; i++) {
 }
 }
 
+// <-------------- SCROLL-TO BUTTON -------------->
 const scrollButton = document.getElementById("scrollButton");
 scrollButton.addEventListener("click", scrollPage);
-
-// <-------------- SCROLL-TO BUTTON -------------->
 function scrollPage(){
   window.scrollTo(0, 700);
 }

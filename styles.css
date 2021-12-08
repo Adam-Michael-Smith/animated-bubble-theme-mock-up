@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-/* ------ STYLING DIRECTORY ------ */
-
 :root{
     --font-main: Arial, Helvetica, sans-serif;
     --font-accent: 'Times New Roman', Times, serif;
@@ -18,13 +16,6 @@ html{
     scroll-behavior: smooth;
     height: 100%;
 }
-
-p{
-    font-size: 1.2rem;
-    color: var(--font-color-main);
-}
-
-/* -------------------------------- */
 
 body{
     font-family: var(--font-main);
@@ -52,6 +43,11 @@ h1, h2{
     margin: auto;
     color: var(--font-color-main);
     text-transform: uppercase;
+}
+
+p{
+    font-size: 1.2rem;
+    color: var(--font-color-main);
 }
 
 /* ------ NAV ------ */
@@ -128,7 +124,7 @@ li{
     position: inherit;
 }
 
-/* ------ FLOATING ICONS: RIGHT ------ */
+/* ------ FLOATING ICONS RIGHT ------ */
 
 .iconsRight {
     display: none;
@@ -170,7 +166,7 @@ li{
     background: rgb(255, 181, 22, 0.5);
   }
 
-/* ------ HERO ------ */
+/* ------ HERO SECTION ------ */
 
 .hero{
     width: 100%;
@@ -207,8 +203,6 @@ li{
     background: rgb(255, 181, 22, 0.5);
 }
 
-
-/* ------ SCROLL BUTTON ------ */
 .scroll-button{
     width: 70px;
     height: 150px;
@@ -224,7 +218,6 @@ li{
     height: 25px;
     transform: rotate(-45deg);
     z-index: 1;
-    cursor: pointer;
 }
 
 /* ------ JAVASCRIPT ------ */
@@ -240,7 +233,7 @@ span{
     opacity: 1;
 }
 
-/* ------ MAIN SECTION ------ */
+/* ------ STORY TEXT BODIES ------ */
 
 .section-two, .section-three{
     position: relative;
@@ -298,36 +291,6 @@ span{
 .blob-four, .blob-five{
     position: absolute;
     display: none;
-}
-
-/* ------ FIND-US MAP ------ */
-.map-container{
-    width: 100%;
-    position: relative;
-}
-
-.map{
-    width: 40%;
-    height: 600px;
-    margin: 40px 0 0 10%;
-    float: left;
-}
-
-.map-container p{
-    width: 40%;
-    background: white;
-    height: 600px;
-    margin: 40px 10% 0 0;
-    display: inline-block;
-}
-
-footer{
-    height: 100px;
-    color: var(--font-color-main);
-    text-align: center;
-    line-height: 10vh;
-    z-index: -1;
-    position: relative;
 }
 
 /* ------ MEDIA QUERIES FOR BLOBS ------ */
@@ -462,9 +425,9 @@ footer{
         left: 2000px;
         width: 100%;
     }
-    }
-/* ------ MEDIA QUERIES ------ */
+}
 
+/* ------ MEDIA QUERIES ------ */
 @media screen and (max-width: 890px) {
 
     .logo-container{
@@ -490,7 +453,7 @@ footer{
     .hero button{
         font-size: 1.0rem;
         letter-spacing: 0.1rem;
-        padding: 20px 20px;
+        padding: 0px 20px;
         width: 125px; height: 125px;
     }
 
@@ -529,34 +492,12 @@ footer{
         margin-bottom: 100px;
     }
 
-    .map{
-        width: 80%;
-        margin: auto 10%;
-        float: none;
-    }
-
-    .map-container p{
-        width: 80%;
-        margin: 20px auto 0 auto;
-        margin: 10%;
-}
-
     footer{
         height: 100px;
     }
 }
 
 @media screen and (min-width: 890px){
-    /* .section-two p:nth-child(1), .section-two p:nth-child(2),
-    .section-three p:nth-child(1), .section-three p:nth-child(2){
-        width: 100%;
-    }
-    .section-two p:nth-child(3), .section-three p:nth-child(3){
-        width: 100%;
-    } */
-    .map{
-        height: 400px;
-    }
 
     .section-two p, .section-three p{
         padding: 15px;

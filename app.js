@@ -17,7 +17,7 @@ for(let i = 0; i < splitTextContent.length; i++){
 }
 
 let letter = 0;
-let count = setInterval(whenNext, 70);
+let count = setInterval(whenNext, 55);
 
 function whenNext(){
     const spanElements = headerText.querySelectorAll('span')[letter];

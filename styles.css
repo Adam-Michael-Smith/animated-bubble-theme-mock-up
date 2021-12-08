@@ -7,7 +7,7 @@
 :root{
     --font-main: Arial, Helvetica, sans-serif;
     --font-accent: 'Times New Roman', Times, serif;
-    --color-orange-main: rgb(255, 181, 22);
+    --color-orange-main: rgb(255, 195, 65);
     --font-color-main: #fff;
     --font-hover-color: #000;
 }
@@ -21,7 +21,7 @@ body{
     font-family: var(--font-main);
     font-size: 100%;
     background-color: var(--color-orange-main);
-    background-image: url(books.png);
+    background-image: url(/books.png);
 }
 
 .clip-all{
@@ -226,7 +226,7 @@ li{
 span{
     color: var(--color-orange-main);
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
 .fade-letter{

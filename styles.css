@@ -293,6 +293,13 @@ span{
     display: none;
 }
 
+/* ------ FOOTER ------ */
+footer{
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
 /* ------ MEDIA QUERIES FOR BLOBS ------ */
 @media screen and (max-width: 650px){
 

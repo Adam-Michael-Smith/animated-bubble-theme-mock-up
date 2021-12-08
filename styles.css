@@ -39,6 +39,11 @@ body{
     position: relative;
 }
 
+.page-margins{
+    width: 100%;
+    height: 100%;
+}
+
 h1, h2{
     font-size: 4rem;
     letter-spacing: 0.125rem;
@@ -94,14 +99,23 @@ li{
     height: 70px;
     width: 70px;
     top: 20px;
-    left: 20px;
+    left: 30px;
     position: absolute;
+}
+
+.book{
+    width: 6px; height: 70px;
+    background: var(--font-color-main);
+    position: inherit;
+    border-radius: 0 0;
+    left: -15px;
+    top: -4px;
 }
 
 .logo{
     background: var(--font-color-main);
     border: 4px solid var(--font-color-main);
-    border-radius: 0 50% 50% 50%;
+    border-radius: 0 50% 50% 0%;
     position: inherit;
 }
 
@@ -110,13 +124,14 @@ li{
     font-family:'Times New Roman', Times, serif;
     color: var(--color-orange-main);
     text-decoration: underline;
-    left: 14px;
+    left: 12px;
     position: inherit;
 }
 
 /* ------ FLOATING ICONS: RIGHT ------ */
 
 .iconsRight {
+    display: none;
     right: 0;
     top: 35vh;
     position: fixed;
@@ -192,6 +207,7 @@ li{
     background: rgb(255, 181, 22, 0.5);
 }
 
+
 /* ------ SCROLL BUTTON ------ */
 .scroll-button{
     width: 70px;
@@ -228,8 +244,7 @@ span{
 
 .section-two, .section-three{
     position: relative;
-    margin-top: 150px;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
     width: 100%;
 }
 
@@ -244,13 +259,13 @@ span{
     display: inline-block;
 }
 
-/* ------ CLIENTS ROTATING BANNER ------ */
-
-.clients{
-    width: 100%; height: 100px;
-    background: white;
-    opacity: 0.5;
-    margin: auto auto 50px auto;
+.sub-text{
+    margin: auto;
+    width: 70%;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--font-color-main);
+    text-align: center;
 }
 
 /* ------ YELLOW BLOBS SVG ------ */
@@ -285,6 +300,27 @@ span{
     display: none;
 }
 
+/* ------ FIND-US MAP ------ */
+.map-container{
+    width: 100%;
+    position: relative;
+}
+
+.map{
+    width: 40%;
+    height: 600px;
+    margin: 40px 0 0 10%;
+    float: left;
+}
+
+.map-container p{
+    width: 40%;
+    background: white;
+    height: 600px;
+    margin: 40px 10% 0 0;
+    display: inline-block;
+}
+
 footer{
     height: 100px;
     color: var(--font-color-main);
@@ -293,6 +329,7 @@ footer{
     z-index: -1;
     position: relative;
 }
+
 /* ------ MEDIA QUERIES FOR BLOBS ------ */
 @media screen and (max-width: 650px){
 
@@ -391,24 +428,43 @@ footer{
 @media screen and (min-width: 3200px) {
 
 .blob-one{
-    top: -5000px;
+    top: -4000px;
     right: -1640px;
 }
 
 .blob-two{
     top: 200px;
-    left: -3000px;
+    left: -2000px;
     width: 100%;
 }
 
 .blob-three{
-    top: 1500px;
-    left: 3700px;
+    top: 1000px;
+    left: 2000px;
     width: 100%;
 }
 }
 
+@media screen and (min-width: 4850px) {
+    .blob-one{
+        top: -5500px;
+        right: -1640px;
+    }
+    
+    .blob-two{
+        top: 200px;
+        left: -3000px;
+        width: 100%;
+    }
+    
+    .blob-three{
+        top: 1000px;
+        left: 2000px;
+        width: 100%;
+    }
+    }
 /* ------ MEDIA QUERIES ------ */
+
 @media screen and (max-width: 890px) {
 
     .logo-container{
@@ -419,6 +475,11 @@ footer{
         display: block;
         align-items: center;
         position: relative;
+    }
+
+    .logo-letter{
+        top:0;
+        position: absolute;
     }
 
     .logo{
@@ -453,10 +514,6 @@ footer{
         border: none;
     }
 
-    .iconsRight{
-        display: none;
-    }
-
     .nav ul li a {
         width: 100%;
         display: block;
@@ -472,11 +529,69 @@ footer{
         margin-bottom: 100px;
     }
 
-    .clients{
-        height: 65px;
+    .map{
+        width: 80%;
+        margin: auto 10%;
+        float: none;
     }
 
+    .map-container p{
+        width: 80%;
+        margin: 20px auto 0 auto;
+        margin: 10%;
+}
+
     footer{
-        height: 50px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 890px){
+    /* .section-two p:nth-child(1), .section-two p:nth-child(2),
+    .section-three p:nth-child(1), .section-three p:nth-child(2){
+        width: 100%;
+    }
+    .section-two p:nth-child(3), .section-three p:nth-child(3){
+        width: 100%;
+    } */
+    .map{
+        height: 400px;
+    }
+
+    .section-two p, .section-three p{
+        padding: 15px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .map-container p{
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .iconsRight{
+        display: block;
+    }
+
+    .section-two p, .section-three p{
+    padding: 20px;
+    width: 33%;
+    display: inline-block;
+    }
+
+    .section-two p:nth-child(1), .section-two p:nth-child(2),
+    .section-three p:nth-child(1), .section-three p:nth-child(2){
+        width: 33%;
+    }
+    .section-two p:nth-child(3), .section-three p:nth-child(3){
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 2500px){
+    .page-margins{
+    max-width: 2500px;
+    margin: auto;
     }
 }
